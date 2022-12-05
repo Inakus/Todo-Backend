@@ -25,3 +25,15 @@ coverage
 
 # Benchmarking
 benchmarks/graphs
+
+.env
+.env.test
+.env.production
+.env.development
+.env.staging
+.env.local
+.env.*.local
+.env.*.test
+.env.*.production
+.env.*.development
+.env.*.staging
