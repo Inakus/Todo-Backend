@@ -40,24 +40,28 @@ app.post("/", async (req, res) => {
     completed: false,
   });
   await todo.save();
-  res.send("Todo added");
+  const find = await Todo.find();
+  res.send(find);
 });
 
 app.put("/:id", async (req, res) => {
   await Todo.findByIdAndUpdate(req.params.id, {
     completed: req.body.completed,
   });
-  res.send("Todo updated");
+  const find = await Todo.find();
+  res.send(find);
 });
 
 app.delete("/:id", async (req, res) => {
   await Todo.findByIdAndDelete(req.params.id);
-  res.send("Todo deleted");
+  const find = await Todo.find();
+  res.send(find);
 });
 
 app.delete("/", async (req, res) => {
   await Todo.deleteMany();
-  res.send("All todos deleted");
+  const find = await Todo.find();
+  res.send(find);
 });
 
 app.listen(port, () => {
