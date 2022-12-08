@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
+    "build": "npx tsc",
     "start": "ts-node index.ts"
   },
   "dependencies": {
